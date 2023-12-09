@@ -7,3 +7,8 @@ const storedTeachers = getTeachersFromLocalStorage();
 function countElements(elements) {
     return elements.length;
 }
+
+const countedStoredStudents = countElements(storedStudents);
+const countedStoredTeachers = countElements(storedTeachers);
+const countedStoredClasses = countElements(storedClasses);
+export { countedStoredStudents, countedStoredTeachers, countedStoredClasses }

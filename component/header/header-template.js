@@ -1,4 +1,3 @@
-
 function headerTemplate() {
     return `
           <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark p-4">

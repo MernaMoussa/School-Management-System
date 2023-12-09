@@ -1,4 +1,5 @@
-function headerTemplate() {
+import { generateNavItems } from "./navigation-bar/nav-bar-template.js"
+function headerTemplate(pages) {
     return `
           <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark p-4">
               <a class="navbar-brand" href="#">LMS</a>
@@ -12,6 +13,7 @@ function headerTemplate() {
               </button>
               <div class="collapse navbar-collapse" id="collapsibleNavbar">
                   <ul class="navbar-nav">
+                  ${generateNavItems(pages)}
                   </ul>
               </div>
           </nav>

@@ -1,4 +1,4 @@
-import { generateNavItems } from "./navigation-bar/navbar-template.js"
+import { generateNavItems } from "./navigation-bar/navbar.module.js"
 function headerTemplate(pages) {
     return `
           <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark p-4">

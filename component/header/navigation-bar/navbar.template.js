@@ -5,7 +5,3 @@ export function generateNavbar(page) {
       </li>
     `;
 }
-
-export function generateNavItems(data) {
-  return data.map(page => generateNavbar(page)).join('');
-}

@@ -5,12 +5,26 @@ import { saveDataToLocalStorage, getDataFromLocalStorage } from './local-storage
 function saveClassesToLocalStorage() {
     saveDataToLocalStorage('classesData', classesData);
 }
-
 function getClassesFromLocalStorage() {
     return getDataFromLocalStorage('classesData');
 }
-
+function saveStudentsToLocalStorage() {
+    saveDataToLocalStorage('studentsData', studentsData);
+}
+function getStudentsDataFromLocalStorage() {
+    return getDataFromLocalStorage('studentsData');
+}
+function saveTeachersToLocalStorage() {
+    saveDataToLocalStorage('teachersData', teachersData);
+}
+function getTeachersFromLocalStorage() {
+    return getDataFromLocalStorage('teachersData', teachersData);
+}
 export {
     saveClassesToLocalStorage,
     getClassesFromLocalStorage,
+    saveStudentsToLocalStorage,
+    getStudentsDataFromLocalStorage,
+    saveTeachersToLocalStorage,
+    getTeachersFromLocalStorage
 };

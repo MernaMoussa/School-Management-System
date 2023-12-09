@@ -1,7 +1,7 @@
 import { contentTemplate } from './content.template.js';
 
-export function initializeContent() {
+export function initializeContent(initialContent) {
     const contentContainer = document.querySelector('.content-section');
-    const content = contentTemplate();
+    const content = contentTemplate(initialContent);
     contentContainer.innerHTML = content;
 }

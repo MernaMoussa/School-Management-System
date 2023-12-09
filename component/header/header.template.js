@@ -11,11 +11,12 @@ function headerTemplate(pages) {
               >
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
                   <ul class="navbar-nav">
                   ${generateNavItems(pages)}
                   </ul>
               </div>
+              <i class="bi bi-person-circle fs-3 text-white"></i>
           </nav>
       `;
 }

@@ -5,8 +5,8 @@ export function footerTemplate() {
             <div class="row">
                 <div class="d-flex justify-content-between">
                     <div class="col-md-4">
-                        <a href="#" class="text-white text-decoration-none mr-3">About us</a>
-                        <a href="#" class="text-white text-decoration-none mr-3">Contact</a>
+                        <a href="#" class="text-white text-decoration-none">About us</a>
+                        <a href="#" class="text-white text-decoration-none">Contact</a>
                     </div>
                     <span>© 2023 LMS</span>
                 </div>
@@ -15,4 +15,3 @@ export function footerTemplate() {
     </footer>
 `;
 }
-

@@ -1,8 +1,7 @@
 import headerTemplate from './header-template.js';
 import { pages } from '../../pages/pages.js';
-
 export function initializeHeader() {
-    const mainContainer = document.getElementById('header-section');
+    const headerSection = document.querySelector('.header-section');
     const headerContent = headerTemplate(pages);
-    mainContainer.innerHTML = headerContent;
+    headerSection.innerHTML = headerContent;
 }

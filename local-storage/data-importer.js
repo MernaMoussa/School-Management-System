@@ -11,7 +11,7 @@ function getClassesFromLocalStorage() {
 function saveStudentsToLocalStorage() {
     saveDataToLocalStorage('studentsData', studentsData);
 }
-function getStudentsDataFromLocalStorage() {
+function getStudentsFromLocalStorage() {
     return getDataFromLocalStorage('studentsData');
 }
 function saveTeachersToLocalStorage() {
@@ -24,7 +24,7 @@ export {
     saveClassesToLocalStorage,
     getClassesFromLocalStorage,
     saveStudentsToLocalStorage,
-    getStudentsDataFromLocalStorage,
+    getStudentsFromLocalStorage,
     saveTeachersToLocalStorage,
     getTeachersFromLocalStorage
 };

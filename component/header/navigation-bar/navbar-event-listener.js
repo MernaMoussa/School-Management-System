@@ -1,4 +1,4 @@
-import { pages } from "../../../pages/pages.js";
+import { pages } from "../../../pages/pages.main-module.js";
 import { initializeContent } from "../../content/content.module.js";
 function handleNavbarClick(event) {
     const pageId = event.target.id;

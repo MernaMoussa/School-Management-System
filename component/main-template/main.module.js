@@ -1,6 +1,6 @@
 import { mainTemplate } from './main.template.js';
 //import { initializeHome } from '../../pages/pages.module/home.module.js'
-import { pages } from '../../pages/pages.js';
+import { pages } from '../../pages/pages.main-module.js';
 import { initializeHeader } from '../header/header.module.js'
 import { initializeContent } from '../content/content.module.js'
 import { initializeFooter } from '../footer/footer.module.js'

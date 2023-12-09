@@ -1,6 +1,10 @@
+import { pages } from "../../../pages/pages.js";
+import { initializeContent } from "../../content/content.module.js";
 function handleNavbarClick(event) {
     if (event.target.id === 'nav-home') {
-        console.log('home')
+        initializeContent(pages[0].pageTemplate())
+    } else if (event.target.id === 'nav-classes') {
+        initializeContent(pages[1].pageTemplate)
     }
 }
 let navbarListenet = document.getElementById('main-container').addEventListener('click', handleNavbarClick);

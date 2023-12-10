@@ -15,9 +15,13 @@ export function genericTemplate(data) {
 };
 
 function renderLastPart(data) {
-    return data.classId ? '<p>Avg. Grade</p>' :
-        `<button type="button" class="btn btn-info students">Students</button>
-            <button type="button" class="btn btn-info ${data.teacherIds ? 'teachers' : 'classes'}">
-                 ${data.teacherIds ? 'Teachers' : 'Classes'}
-            </button>`;
+    return data.classId ? '<p>Avg. Grade</p>' : renderButtons(data);
+}
+function renderButtons(data) {
+    return `
+        <button type="button" class="btn btn-info students">Students</button>
+        <button type="button" class="btn btn-info ${data.teacherIds ? 'teachers' : 'classes'}">
+            ${data.teacherIds ? 'Teachers' : 'Classes'}
+        </button>
+        `;
 }

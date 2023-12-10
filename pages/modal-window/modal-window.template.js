@@ -1,3 +1,4 @@
+import { studentModalWindow } from "./Student-modal.template.js"
 export function renderModalWindow() {
     return `
     <div class="modal fade" id="add-btn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -8,7 +9,7 @@ export function renderModalWindow() {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                ${studentModalWindow()}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -19,5 +20,3 @@ export function renderModalWindow() {
     </div>
     `
 }
-
-

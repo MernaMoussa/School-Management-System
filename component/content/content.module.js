@@ -7,7 +7,6 @@ export function initializeContent(initialContent) {
     contentContainer.innerHTML = content;
     const pageId = event.target.id;
     const selectedPage = pages.find(page => `nav-${page.pageName.toLowerCase()}` === pageId);
-    console.log(selectedPage)
     if (selectedPage !== 'home') {
         addNewElement()
     }

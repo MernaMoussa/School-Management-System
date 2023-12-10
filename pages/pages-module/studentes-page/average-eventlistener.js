@@ -8,13 +8,16 @@ export function popup() {
         const selectedStudent = storedStudents.find(student => student.id === eventId);
         if (selectedStudent) {
             displayGradeDetails()
+            console.log(selectedStudent)
         }
     });
 }
 function displayGradeDetails() {
-    return `
-        <div class="modal-dialog modal-xl">...</div> 
-    `
+    const modalContainer = document.createElement('div');
+    document.body.appendChild(modalContainer);
+    modalContainer.innerHTML = `
+    <div class="modal-dialog modal-xl">...</div> 
+`
 }
 
 function getAllGrades(data) {

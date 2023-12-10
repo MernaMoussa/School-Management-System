@@ -6,13 +6,24 @@ export function genericTemplate(data) {
                 <button type="button" class="btn btn-danger m-1 remove"><i class="bi bi-dash-circle"></i></button>
             </div>
             <h2>${data.name}</h2>
-            ${data.teacherIds ? `<p>Teacher IDs: ${data.teacherIds.join(', ')}</p>` : ''}
-            ${data.subject ? `<p>Subject: ${data.subject}</p>` : ''}
-            ${data.classId ? `<p>Department: ${data.department}</p>` : ''}
+            ${renderTeacherIds(data)}
+            ${renderSubject(data)}
+            ${renderDepartment(data)}
             ${renderLastPart(data)}
         </div >
         `;
 };
+
+function renderDepartment(data) {
+    return data.classId ? `<p>Department: ${data.department}</p>` : '';
+}
+
+function renderTeacherIds(data) {
+    return data.teacherIds ? `<p>Teacher IDs: ${data.teacherIds.join(', ')}</p>` : '';
+}
+function renderSubject(data) {
+    return data.subject ? `<p>Subject: ${data.subject}</p>` : '';
+}
 
 function renderLastPart(data) {
     return data.classId ? '<p>Avg. Grade</p>' : renderButtons(data);

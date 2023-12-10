@@ -11,7 +11,7 @@ function classesPage() {
 }
 
 function initializeClasses() {
-    return initializeMainTemplate(classesPage());
+    return initializeMainTemplate(classesPage(), 'Classes');
 }
 
 function studentesPage() {
@@ -20,7 +20,7 @@ function studentesPage() {
 }
 
 function initializeStudents() {
-    return initializeMainTemplate(studentesPage());
+    return initializeMainTemplate(studentesPage(), 'Students');
 }
 function teachersPage() {
     const storedTeachers = getTeachersFromLocalStorage();
@@ -28,7 +28,7 @@ function teachersPage() {
 }
 
 function initializeTeachers() {
-    return initializeMainTemplate(teachersPage());
+    return initializeMainTemplate(teachersPage(), 'Teachers');
 }
 
 export { initializeClasses, initializeStudents, initializeTeachers };

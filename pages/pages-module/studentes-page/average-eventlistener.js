@@ -3,7 +3,8 @@ const storedStudents = getStudentsFromLocalStorage();
 export function popup() {
     return document.getElementById('content-section').addEventListener('click', function (event) {
         const eventclass = event.target.id;
-        const eventId = Number(eventclass);
+        const eventId = Number(eventclass.split('-')[1]);
+        console.log(eventId)
         const selectedStudent = storedStudents.find(student => student.id === eventId);
         if (selectedStudent) {
             displayGradeDetails()

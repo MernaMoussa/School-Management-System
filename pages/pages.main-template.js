@@ -1,8 +1,7 @@
-import { initializeClasses } from "./pages.module/classes.module.JS"
-export function initializeMainTemplate() {
+export function initializeMainTemplate(pPage) {
     return `
         <div class="row justify-content-center">
             <h1>  </h1>
-            ${initializeClasses()}
+            ${pPage}
         </div>`
 }

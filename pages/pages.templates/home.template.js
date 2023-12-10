@@ -29,4 +29,4 @@ function homeTemplate(pCountedStudents, pCountedTeachers, pCountedClasses) {
       `;
 }
 
-export default homeTemplate;
+export { homeTemplate };

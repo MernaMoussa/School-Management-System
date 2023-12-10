@@ -10,6 +10,6 @@ function handleNavbarClick(event) {
     }
 }
 export function initializeNavbarListener() {
-    const navbarListener = document.getElementById('main-container').addEventListener('click', handleNavbarClick);
+    const navbarListener = document.getElementById('navbar-items').addEventListener('click', handleNavbarClick);
     return navbarListener;
 }

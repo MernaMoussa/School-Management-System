@@ -13,7 +13,7 @@ const countedStoredTeachers = countElements(storedTeachers);
 const countedStoredClasses = countElements(storedClasses);
 
 export function initializeHome() {
-    const contentSection = document.querySelector('.content-section')
+    const contentSection = document.getElementById('content-section')
     let homeContent = homeTemplate(countedStoredStudents, countedStoredTeachers, countedStoredClasses);
     return contentSection.innerHTML = homeContent
 }

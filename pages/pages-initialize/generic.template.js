@@ -9,8 +9,15 @@ export function genericTemplate(data) {
             ${data.teacherIds ? `<p>Teacher IDs: ${data.teacherIds.join(', ')}</p>` : ''}
             ${data.subject ? `<p>Subject: ${data.subject}</p>` : ''}
             ${data.classId ? `<p>Department: ${data.department}</p>` : ''}
-            ${data.classId ? '<p>Avg. Grade</p>' : `<button type="button" class="btn btn-info students">Students</button>
-            <button type="button" class="btn btn-info ${data.teacherIds ? 'teachers' : 'classes'}">${data.teacherIds ? 'Teachers' : 'Classes'}</button>`}
+            ${renderLastPart(data)}
         </div >
         `;
-}   
+};
+
+function renderLastPart(data) {
+    return data.classId ? '<p>Avg. Grade</p>' :
+        `<button type="button" class="btn btn-info students">Students</button>
+            <button type="button" class="btn btn-info ${data.teacherIds ? 'teachers' : 'classes'}">
+                 ${data.teacherIds ? 'Teachers' : 'Classes'}
+            </button>`;
+}

@@ -1,3 +1,4 @@
+import { getAvrgGrade } from "../pages-module/student.module.js";
 function renderAdjustmentButtons(data) {
     return `
         <div class="d-flex justify-content-end">
@@ -19,7 +20,7 @@ function renderSubject(data) {
 }
 
 function renderLastPart(data) {
-    return data.classId ? '<p>Avg. Grade</p>' : renderButtons(data);
+    return data.classId ? getAvrgGrade(data) : renderButtons(data);
 }
 function renderButtons(data) {
     return `

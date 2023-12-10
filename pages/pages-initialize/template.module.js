@@ -20,7 +20,7 @@ function renderSubject(data) {
 }
 
 function renderLastPart(data) {
-    return data.classId ? `<button class="btn text-primary" data-bs-toggle="button" class="avg-btn">Average Grade: ${getAvgGrade(data)}</button>` : renderButtons(data);
+    return data.classId ? `<button class="btn text-primary" data-bs-toggle="button" id="${data.id}">Average Grade: ${getAvgGrade(data)}</button>` : renderButtons(data);
 }
 function renderButtons(data) {
     return `

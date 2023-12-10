@@ -1,4 +1,4 @@
-import { getStudentsFromLocalStorage } from "../../../local-storage/data-importer.js"
+import { getStudentsFromLocalStorage } from "../../../app.js"
 const storedStudents = getStudentsFromLocalStorage();
 export function popup() {
     return document.getElementById('content-section').addEventListener('click', function (event) {

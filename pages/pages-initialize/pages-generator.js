@@ -1,8 +1,8 @@
-import { getClassesFromLocalStorage, getTeachersFromLocalStorage, getStudentsFromLocalStorage } from '../local-storage/data-importer.js';
-import { initializeMainTemplate } from './pages.main-template.js';
+import { getClassesFromLocalStorage, getTeachersFromLocalStorage, getStudentsFromLocalStorage } from '../../local-storage/data-importer.js';
+import { initializeMainTemplate } from '../pages.main-template.js';
 import { genericTemplate } from './generic.template.js';
 
-const storedTeachers = getTeachersFromLocalStorage();
+
 
 function initializePages(storedData, templateFunction) {
     return storedData.map(templateFunction).join('');
@@ -24,7 +24,15 @@ function studentesPage() {
 function initializeStudents() {
     return initializeMainTemplate(studentesPage());
 }
+function teachersPage() {
+    const storedTeachers = getTeachersFromLocalStorage();
+    return initializePages(storedTeachers, genericTemplate);
+}
+
+function initializeTeachers() {
+    return initializeMainTemplate(teachersPage());
+}
 
 
 
-export { initializeClasses, initializeStudents };
+export { initializeClasses, initializeStudents, initializeTeachers };

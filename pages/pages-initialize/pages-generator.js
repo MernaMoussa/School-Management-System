@@ -2,8 +2,6 @@ import { getClassesFromLocalStorage, getTeachersFromLocalStorage, getStudentsFro
 import { initializeMainTemplate } from '../pages.main-template.js';
 import { genericTemplate } from './generic.template.js';
 
-
-
 function initializePages(storedData, templateFunction) {
     return storedData.map(templateFunction).join('');
 }
@@ -32,7 +30,5 @@ function teachersPage() {
 function initializeTeachers() {
     return initializeMainTemplate(teachersPage());
 }
-
-
 
 export { initializeClasses, initializeStudents, initializeTeachers };

@@ -20,7 +20,7 @@ function renderSubject(data) {
 }
 
 function renderLastPart(data) {
-    return data.classId ? getAvgGrade(data) : renderButtons(data);
+    return data.classId ? `<p>Average Grade: ${getAvgGrade(data)}</p>` : renderButtons(data);
 }
 function renderButtons(data) {
     return `

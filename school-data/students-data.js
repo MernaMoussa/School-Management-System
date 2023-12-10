@@ -3,7 +3,7 @@ const students = [
         id: 2001,
         classId: 1,
         name: "John Smith",
-        departments: "fullstack",
+        department: "fullstack",
         subjects: {
             programming: 77,
             webDevelopment: 60,
@@ -14,7 +14,7 @@ const students = [
         id: 2002,
         classId: 1,
         name: "Jane Doe",
-        departments: "fullstack",
+        department: "fullstack",
         subjects: {
             programming: 85,
             webDevelopment: 90,
@@ -25,7 +25,7 @@ const students = [
         id: 2003,
         classId: 1,
         name: "Bob Johnson",
-        departments: "fullstack",
+        department: "fullstack",
         subjects: {
             programming: 50,
             webDevelopment: 88,
@@ -37,7 +37,7 @@ const students = [
         id: 2019,
         classId: 1,
         name: "Ava Davis",
-        departments: "fullstack",
+        department: "fullstack",
         subjects: {
             programming: 50,
             webDevelopment: 65,
@@ -48,7 +48,7 @@ const students = [
         id: 2025,
         classId: 1,
         name: "Avery Wilson",
-        departments: "fullstack",
+        department: "fullstack",
         subjects: {
             programming: 55,
             webDevelopment: 60,
@@ -59,7 +59,7 @@ const students = [
         id: 2004,
         classId: 2,
         name: "Emily Davis",
-        departments: "cloud",
+        department: "cloud",
         subjects: {
             cloudComputing: 92,
             virtualization: 87,
@@ -70,7 +70,7 @@ const students = [
         id: 2005,
         classId: 2,
         name: "Chris Wilson",
-        departments: "cloud",
+        department: "cloud",
         subjects: {
             cloudComputing: 88,
             virtualization: 90,
@@ -81,7 +81,7 @@ const students = [
         id: 2006,
         classId: 2,
         name: "Anna Miller",
-        departments: "cloud",
+        department: "cloud",
         subjects: {
             cloudComputing: 99,
             virtualization: 95,
@@ -92,7 +92,7 @@ const students = [
         id: 2020,
         classId: 2,
         name: "Liam Johnson",
-        departments: "cloud",
+        department: "cloud",
         subjects: {
             cloudComputing: 100,
             virtualization: 98,
@@ -103,7 +103,7 @@ const students = [
         id: 2024,
         classId: 2,
         name: "Logan Lee",
-        departments: "cloud",
+        department: "cloud",
         subjects: {
             cloudComputing: 95,
             virtualization: 95,
@@ -114,7 +114,7 @@ const students = [
         id: 2007,
         classId: 3,
         name: "Tom Brown",
-        departments: "dataScience",
+        department: "dataScience",
         subjects: {
             machineLearning: 91,
             dataAnalytics: 85,
@@ -125,7 +125,7 @@ const students = [
         id: 2008,
         classId: 3,
         name: "Sara White",
-        departments: "dataScience",
+        department: "dataScience",
         subjects: {
             machineLearning: 70,
             dataAnalytics: 60,
@@ -136,7 +136,7 @@ const students = [
         id: 2009,
         classId: 3,
         name: "Michael Lee",
-        departments: "dataScience",
+        department: "dataScience",
         subjects: {
             machineLearning: 100,
             dataAnalytics: 95,
@@ -147,7 +147,7 @@ const students = [
         id: 2010,
         classId: 3,
         name: "Alex Turner",
-        departments: "dataScience",
+        department: "dataScience",
         subjects: {
             machineLearning: 97,
             dataAnalytics: 82,
@@ -158,7 +158,7 @@ const students = [
         id: 2023,
         classId: 3,
         name: "Isabella White",
-        departments: "dataScience",
+        department: "dataScience",
         subjects: {
             machineLearning: 91,
             dataAnalytics: 85,
@@ -169,7 +169,7 @@ const students = [
         id: 2011,
         classId: 4,
         name: "Olivia Clark",
-        departments: "mobile",
+        department: "mobile",
         subjects: {
             mobileDevelopment: 87,
             appDesign: 90,
@@ -180,7 +180,7 @@ const students = [
         id: 2012,
         classId: 4,
         name: "Daniel Taylor",
-        departments: "mobile",
+        department: "mobile",
         subjects: {
             mobileDevelopment: 77,
             appDesign: 65,
@@ -191,7 +191,7 @@ const students = [
         id: 2013,
         classId: 4,
         name: "Grace Cooper",
-        departments: "mobile",
+        department: "mobile",
         subjects: {
             mobileDevelopment: 85,
             appDesign: 91,
@@ -202,7 +202,7 @@ const students = [
         id: 2022,
         classId: 4,
         name: "Noah Turner",
-        departments: "mobile",
+        department: "mobile",
         subjects: {
             mobileDevelopment: 77,
             appDesign: 65,
@@ -213,7 +213,7 @@ const students = [
         id: 2014,
         classId: 4,
         name: "Henry Adams",
-        departments: "mobile",
+        department: "mobile",
         subjects: {
             mobileDevelopment: 75,
             appDesign: 73,
@@ -224,7 +224,7 @@ const students = [
         id: 2015,
         classId: 5,
         name: "Sophia Rogers",
-        departments: "security",
+        department: "security",
         subjects: {
             networkSecurity: 89,
             cybersecurity: 86,
@@ -235,7 +235,7 @@ const students = [
         id: 2016,
         classId: 5,
         name: "Aiden Parker",
-        departments: "security",
+        department: "security",
         subjects: {
             networkSecurity: 85,
             cybersecurity: 52,
@@ -246,7 +246,7 @@ const students = [
         id: 2017,
         classId: 5,
         name: "Emma Turner",
-        departments: "security",
+        department: "security",
         subjects: {
             networkSecurity: 95,
             cybersecurity: 92,
@@ -257,7 +257,7 @@ const students = [
         id: 2018,
         classId: 5,
         name: "Mason Harris",
-        departments: "security",
+        department: "security",
         subjects: {
             networkSecurity: 85,
             cybersecurity: 84,
@@ -268,7 +268,7 @@ const students = [
         id: 2021,
         classId: 5,
         name: "Ella Brown",
-        departments: "security",
+        department: "security",
         subjects: {
             networkSecurity: 75,
             cybersecurity: 84,

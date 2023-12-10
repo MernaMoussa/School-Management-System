@@ -1,7 +1,12 @@
+import { getStudentsFromLocalStorage } from "../../../local-storage/data-importer.js"
+const storedStudents = getStudentsFromLocalStorage();
 export function popup() {
     return document.getElementById('content-section').addEventListener('click', function (event) {
-        const eventclass = event.target.id
-        console.log(eventclass)
-    })
+        const eventclass = event.target.id;
+        const eventId = Number(eventclass);
+        const selectedStudent = storedStudents.find(student => student.id === eventId);
+        if (selectedStudent) {
+            console.log(selectedStudent);
+        }
+    });
 }
-

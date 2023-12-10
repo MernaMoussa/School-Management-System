@@ -1,6 +1,7 @@
 import { getClassesFromLocalStorage, getTeachersFromLocalStorage, getStudentsFromLocalStorage } from '../../app.js';
 import { initializeMainTemplate } from '../pages.main-template.js';
 import { genericTemplate } from './generic.template.js';
+import { addNewElement } from '../event-listener/event-listener.js';
 
 function initializePages(storedData, templateFunction) {
     return storedData.map(templateFunction).join('');

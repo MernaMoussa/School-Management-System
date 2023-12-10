@@ -6,7 +6,7 @@ function handleNavbarClick(event) {
     const selectedPage = pages.find(page => `nav-${page.pageName.toLowerCase()}` === pageId);
     console.log(selectedPage)
     if (selectedPage) {
-        initializeContent(selectedPage.pageTemplate);
+        initializeContent(selectedPage.pageTemplate());
     }
 }
 export function initializeNavbarListener() {

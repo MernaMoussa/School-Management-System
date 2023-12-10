@@ -13,7 +13,7 @@ function headerTemplate(pages) {
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav" id="navbar-items">
                     ${generateNavItems(pages)}
                     </ul>
                 </div>

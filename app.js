@@ -12,3 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     initialize()
     initializeNavbarListener()
 });
+export {
+    getClassesFromLocalStorage,
+    getStudentsFromLocalStorage,
+    getTeachersFromLocalStorage
+}

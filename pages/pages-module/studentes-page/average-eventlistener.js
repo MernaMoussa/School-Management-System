@@ -6,7 +6,21 @@ export function popup() {
         const eventId = Number(eventclass);
         const selectedStudent = storedStudents.find(student => student.id === eventId);
         if (selectedStudent) {
-            console.log(selectedStudent);
+            displayGradeDetails()
         }
     });
 }
+function displayGradeDetails() {
+    return `
+        <div class="modal-dialog modal-xl">...</div> 
+    `
+}
+
+function getAllGrades(data) {
+    const allGrades = data.subjects
+    return `${allGrades}`
+}
+
+
+
+

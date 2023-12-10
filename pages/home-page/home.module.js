@@ -1,4 +1,4 @@
-import { getClassesFromLocalStorage, getStudentsFromLocalStorage, getTeachersFromLocalStorage } from '../../local-storage/data-importer.js';
+import { getClassesFromLocalStorage, getStudentsFromLocalStorage, getTeachersFromLocalStorage } from '../../app.js';
 import { homeTemplate } from './home.template.js';
 const storedClasses = getClassesFromLocalStorage();
 const storedStudents = getStudentsFromLocalStorage();

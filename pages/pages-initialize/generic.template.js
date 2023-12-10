@@ -7,7 +7,8 @@ export function genericTemplate(data) {
             </div>
             <h2>${data.name}</h2>
             ${data.teacherIds ? `<p>Teacher IDs: ${data.teacherIds.join(', ')}</p>` : ''}
-            ${data.department ? `<p>Department: ${data.department}</p>` : ''}
+            ${data.subject ? `<p>Subject: ${data.subject}</p>` : ''}
+            ${data.classId ? `<p>Department: ${data.department}</p>` : ''}
             <p>Additional text</p>
             <button type="button"  class="btn btn-info students">Students</button>
             <button type="button"  class="btn btn-info ${data.teacherIds ? 'teachers' : 'classes'}">${data.teacherIds ? 'Teachers' : 'Classes'}</button>

@@ -9,13 +9,13 @@ export function handleNavbarClick(pages, storedClasses, storedStudents, storedTe
             initializeContent(pages, selectedPage.pageTemplate(storedClasses, storedStudents, storedTeachers));
             break;
         case 'Classes':
-            initializeContent(pages, selectedPage.pageTemplate(storedClasses));
+            initializeContent(pages, selectedPage.pageTemplate(storedClasses, storedStudents, storedTeachers));
             break;
         case 'Students':
-            initializeContent(pages, selectedPage.pageTemplate(storedStudents));
+            initializeContent(pages, selectedPage.pageTemplate(storedClasses, storedStudents, storedTeachers));
             break;
         case 'Teachers':
-            initializeContent(pages, selectedPage.pageTemplate(storedTeachers));
+            initializeContent(pages, selectedPage.pageTemplate(storedClasses, storedStudents, storedTeachers));
             break;
         default:
             console.error(`Page type not valid: ${selectedPage.pageName}`);

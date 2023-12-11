@@ -1,23 +1,30 @@
-export function studentModalWindow() {
+export function studentModalWindow(storedClasses, storedStudents, storedTeachers) {
     return `
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Add Student Id" aria-label="Id" aria-describedby="basic-addon1">
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Add Class Id" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Add Student Name" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Add Department" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="mb-3">
-            <select class="form-control mt-2" id="subjectSelect" required>
-                <option value="subject-1">Web Development</option>
-                <option value="subject-2">Programming</option>
-                <option value="subject-3">Databases</option>
-            </select>
-        </div>
+    <form id="studentForm">
+      <div class="mb-3">
+        <label for="classSelect">Class:</label>
+        <select class="form-control" id="classSelect" name="classId"></select>
+      </div>
+
+      <div class="mb-3">
+        <label for="studentName">Student Name:</label>
+        <input type="text" class="form-control" id="studentName" name="name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="studentId">Student ID:</label>
+        <input type="text" class="form-control" id="studentId" name="id" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="department">Department:</label>
+        <select class="form-control" id="department" name="department" required></select>
+      </div>
+
+      <div class="mb-3">
+        <label for="subjectSelect">Select Subject:</label>
+        <select class="form-control mt-2" id="subjectSelect" name="subjects" required></select>
+      </div>
+    </form>
         `
 };

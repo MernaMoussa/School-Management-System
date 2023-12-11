@@ -16,16 +16,16 @@ function teachersPage(storedTeachers) {
     return initializePages(storedTeachers, genericTemplate);
 }
 
-function initializeClasses(storedClasses) {
-    return initializeMainTemplate(classesPage(storedClasses), 'Classes');
+function initializeClasses(storedClasses, storedStudents, storedTeachers) {
+    return initializeMainTemplate(classesPage(storedClasses), 'Classes', storedClasses, storedStudents, storedTeachers);
 }
 
-function initializeStudents(storedStudents) {
-    return initializeMainTemplate(studentesPage(storedStudents), 'Students');
+function initializeStudents(storedClasses, storedStudents, storedTeachers) {
+    return initializeMainTemplate(studentesPage(storedStudents), 'Students', storedClasses, storedStudents, storedTeachers);
 }
 
-function initializeTeachers(storedTeachers) {
-    return initializeMainTemplate(teachersPage(storedTeachers), 'Teachers');
+function initializeTeachers(storedClasses, storedStudents, storedTeachers) {
+    return initializeMainTemplate(teachersPage(storedTeachers), 'Teachers', storedClasses, storedStudents, storedTeachers);
 }
 
 export { initializeClasses, initializeStudents, initializeTeachers };

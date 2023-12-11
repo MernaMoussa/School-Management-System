@@ -1,5 +1,5 @@
 import { renderModalWindow } from "./modal-window/modal-window.template.js"
-export function initializeMainTemplate(initializePagesFunction, pageHeader) {
+export function initializeMainTemplate(initializePagesFunction, pageHeader, storedClasses, storedStudents, storedTeachers) {
     return `
         <div class="row justify-content-center">
             <h1>${pageHeader}</h1>
@@ -8,7 +8,7 @@ export function initializeMainTemplate(initializePagesFunction, pageHeader) {
                     <button type="button" class="btn btn-info col-2 mb-4" data-bs-toggle="modal" data-bs-target="#add-btn" id="new-element">
                         Add New ${pageHeader}
                     </button>
-                    ${renderModalWindow()}
+                    ${renderModalWindow(storedClasses, storedStudents, storedTeachers)}
                 </div>
             </div>
             ${initializePagesFunction}

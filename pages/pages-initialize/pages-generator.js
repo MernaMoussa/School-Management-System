@@ -1,4 +1,3 @@
-import { getClassesFromLocalStorage, getTeachersFromLocalStorage, getStudentsFromLocalStorage } from '../../app.js';
 import { initializeMainTemplate } from '../pages.main-template.js';
 import { genericTemplate } from './generic.template.js';
 import { addNewElement } from '../event-listener/event-listener.js';
@@ -6,30 +5,27 @@ import { addNewElement } from '../event-listener/event-listener.js';
 function initializePages(storedData, templateFunction) {
     return storedData.map(templateFunction).join('');
 }
-function classesPage() {
-    const storedClasses = getClassesFromLocalStorage();
+function classesPage(storedClasses) {
     return initializePages(storedClasses, genericTemplate);
 }
 
-function initializeClasses() {
-    return initializeMainTemplate(classesPage(), 'Classes');
+function initializeClasses(storedClasses) {
+    return initializeMainTemplate(classesPage(storedClasses), 'Classes');
 }
 
-function studentesPage() {
-    const storedStudents = getStudentsFromLocalStorage();
+function studentesPage(storedStudents) {
     return initializePages(storedStudents, genericTemplate);
 }
 
-function initializeStudents() {
-    return initializeMainTemplate(studentesPage(), 'Students');
+function initializeStudents(storedStudents) {
+    return initializeMainTemplate(studentesPage(storedStudents), 'Students');
 }
-function teachersPage() {
-    const storedTeachers = getTeachersFromLocalStorage();
+function teachersPage(storedTeachers) {
     return initializePages(storedTeachers, genericTemplate);
 }
 
-function initializeTeachers() {
-    return initializeMainTemplate(teachersPage(), 'Teachers');
+function initializeTeachers(storedTeachers) {
+    return initializeMainTemplate(teachersPage(storedTeachers), 'Teachers');
 }
 
 export { initializeClasses, initializeStudents, initializeTeachers };

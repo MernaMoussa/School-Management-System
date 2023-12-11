@@ -10,12 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     getClassesFromLocalStorage();
     getStudentsFromLocalStorage();
     getTeachersFromLocalStorage();
-    initialize(pages)
+    initialize(pages, getClassesFromLocalStorage, getStudentsFromLocalStorage, getTeachersFromLocalStorage)
     initializeNavbarListener(pages);
 });
-
-export {
-    getClassesFromLocalStorage,
-    getStudentsFromLocalStorage,
-    getTeachersFromLocalStorage
-}

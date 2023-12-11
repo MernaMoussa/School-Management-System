@@ -1,4 +1,3 @@
-import { getClassesFromLocalStorage, getStudentsFromLocalStorage, getTeachersFromLocalStorage } from '../../app.js';
 import { homeTemplate } from './home.template.js';
 
 
@@ -6,11 +5,8 @@ function countElements(elements) {
     return elements.length;
 }
 
-export function initializeHome() {
+export function initializeHome(storedClasses, storedStudents, storedTeachers) {
     const contentSection = document.getElementById('content-section')
-    const storedClasses = getClassesFromLocalStorage();
-    const storedStudents = getStudentsFromLocalStorage();
-    const storedTeachers = getTeachersFromLocalStorage();
-    let homeContent = homeTemplate(countElements(storedStudents), countElements(storedTeachers), countElements(storedClasses));
+    let homeContent = homeTemplate(countElements(storedClasses), countElements(storedStudents), countElements(storedTeachers));
     return contentSection.innerHTML = homeContent
 }

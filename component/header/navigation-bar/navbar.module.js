@@ -1,4 +1,4 @@
 import { generateNavbar } from './navbar.template.js'
-export function generateNavItems(data) {
-    return data.map(page => generateNavbar(page)).join('');
+export function generateNavItems(pages) {
+    return pages.map(page => generateNavbar(page)).join('');
 }

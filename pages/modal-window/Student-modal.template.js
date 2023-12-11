@@ -2,8 +2,11 @@ export function studentModalWindow(storedClasses, storedStudents, storedTeachers
     return `
     <form id="studentForm">
       <div class="mb-3">
-        <label for="classSelect">Class:</label>
-        <select class="form-control" id="classSelect" name="classId"></select>
+        <label for="classSelect">Class ID:</label>
+        <select class="form-control" id="classSelect" name="classId">
+        <option value="">Select Class Id</option>
+        ${generateClassOptions(storedClasses)}
+        </select>
       </div>
 
       <div class="mb-3">
@@ -28,3 +31,9 @@ export function studentModalWindow(storedClasses, storedStudents, storedTeachers
     </form>
         `
 };
+
+function generateClassOptions(storedClasses) {
+    return storedClasses.map((classData) => {
+        return `<option value="${classData.id}">${classData.id}</option>`;
+    }).join('');
+}

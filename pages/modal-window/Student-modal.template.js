@@ -4,7 +4,7 @@ export function studentModalWindow(storedClasses, storedStudents, storedTeachers
       <div class="mb-3">
         <label for="classSelect">Class ID:</label>
         <select class="form-control" id="classSelect" name="classId">
-        <option value="">Select Class Id</option>
+        <option value="" disabled selected hidden>Select Class Id</option>
         ${generateClassOptions(storedClasses)}
         </select>
       </div>

@@ -1,5 +1,6 @@
-import { addNewElement } from '../../pages/event-listener/event-listener.js';
 import { contentTemplate } from './content.template.js';
+import { addNewElement } from '../../pages/event-listener/event-listener.js';
+
 export function initializeContent(pages, initialContent) {
     const contentContainer = document.getElementById('content-section');
     const content = contentTemplate(initialContent);

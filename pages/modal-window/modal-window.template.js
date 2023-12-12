@@ -1,4 +1,4 @@
-import { studentModalWindow } from "./Student-modal.template.js"
+import { studentModalWindowTemplate } from "./Student-modal.template.js"
 export function renderModalWindow(storedClasses, storedStudents, storedTeachers) {
     return `
     <div class="modal fade" id="add-btn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -9,11 +9,16 @@ export function renderModalWindow(storedClasses, storedStudents, storedTeachers)
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                ${studentModalWindow(storedClasses, storedStudents, storedTeachers)}
+                ${studentModalWindowTemplate(storedClasses, storedStudents, storedTeachers)}
+                </div>
+                <div id="successMessage" class="alert alert-success" role="alert" style="display: none;">
+                    Student added successfully!
+                </div>
+                <div id="errorMessage" class="alert alert-success" role="alert" style="display: none;">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" id="submit">Save changes</button>
                 </div>
             </div>
         </div>

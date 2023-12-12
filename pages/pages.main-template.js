@@ -13,5 +13,5 @@ export function initializeMainTemplate(initializePagesFunction, pageHeader, stor
             </div>
             ${initializePagesFunction}
         </div>
-        `
+    `;
 }

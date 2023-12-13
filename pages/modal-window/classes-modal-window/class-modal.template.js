@@ -1,6 +1,6 @@
 import { generateClassesIdOptions, generateDepartmentOptions, generateSubjectOptions } from "../student-modal-window/student-modal.module.js"
 
-export function renderTeacherModalWindow(storedClasses) {
+export function renderClassModalWindow(storedClasses) {
     return `
       <form id="studentForm">
           <div class="mb-3">

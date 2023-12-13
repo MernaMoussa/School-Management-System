@@ -1,4 +1,4 @@
-//import { renderClassModalWindow } from "./Classes-modal.template.js";
+import { renderClassModalWindow } from "./classes-modal-window/class-modal.template.js";
 import { renderStudentModalWindow } from "./student-modal-window/student-modal.template.js";
 import { renderTeacherModalWindow } from "./teachers-modal-window/teacher-modal.template.js";
 import { renderModalWindow } from "./modal-window.template.js";

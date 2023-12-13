@@ -37,12 +37,15 @@ function handleNavbarClick(
             retrieveTeachersData
         );
         setupSubjectUpdateListener(storedClasses);
-        const submitBtn = document.getElementById('submit');
-        const modal = new bootstrap.Modal(document.getElementById('add-btn'));
-        if (submitBtn) {
-            submitBtn.addEventListener('click', handleSaveChanges(storedClasses, retrieveStudentsData, saveClasses, modal));
-        } else {
-            console.log(`Page type not valid ${selectedPage ? selectedPage.pageName : 'unknown'}`);
+        console.log(pageId)
+        if (pageId !== "nav-home") {
+            const submitBtn = document.getElementById('submit');
+            const modal = new bootstrap.Modal(document.getElementById('add-btn'));
+            if (submitBtn) {
+                submitBtn.addEventListener('click', handleSaveChanges(storedClasses, retrieveStudentsData, saveClasses, modal));
+            } else {
+                console.log(`Page type not valid ${selectedPage ? selectedPage.pageName : 'unknown'}`);
+            }
         }
     }
 };

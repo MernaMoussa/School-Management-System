@@ -1,4 +1,3 @@
-/*
 import { getStudentsFromLocalStorage } from "../../../app.js"
 const storedStudents = getStudentsFromLocalStorage();
 export function popup() {
@@ -24,7 +23,6 @@ function getAllGrades(data) {
     const allGrades = data.subjects
     return `${allGrades}`
 }
-*/
 
 
 

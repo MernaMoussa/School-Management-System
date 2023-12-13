@@ -9,6 +9,13 @@ function generateDepartmentOptions(storedClasses) {
         return `<option value="${classData.name}">${classData.name}</option>`;
     }).join('');
 }
+
+function generateSubjectOptions(storedClasses) { //for teachers modal "modularization"
+    return storedClasses.flatMap(course => {
+        return course.subjects.map(subject => `<option value="${subject}">${subject}</option>`);
+    }).join('');
+}
+
 function generateSubjectCheckboxes(selectedClass) {
     return selectedClass.subjects.map(subject => {
         return `<input type="checkbox" name="subject-checkbox" value="${subject}" id="selected-subjects">
@@ -30,4 +37,4 @@ function updateSubjects(storedClasses) {
     }
 }
 
-export { generateClassesIdOptions, generateDepartmentOptions, updateSubjects };
+export { generateClassesIdOptions, generateDepartmentOptions, updateSubjects, generateSubjectOptions };

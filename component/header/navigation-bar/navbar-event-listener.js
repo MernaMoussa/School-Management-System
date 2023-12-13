@@ -1,7 +1,7 @@
 import { initializeContent } from "../../content/content.module.js";
 import { setupSubjectUpdateListener } from "../../../pages/modal-window/modal-listener-handler.js";
 import { handleSaveChanges } from "../../../pages/modal-window/student-modal-window/student-handler.module.js";
-
+import { setupRemoveButtons } from "../../../pages/control-changes.js/remove-item.module.js";
 function findSelectedPage(pages, pageId) {
     return pages.find(page => `nav-${page.pageName.toLowerCase()}` === pageId);
 }
@@ -37,24 +37,58 @@ function handleNavbarClick(
             retrieveTeachersData
         );
         setupSubjectUpdateListener(storedClasses);
-        addListeners(storedClasses, retrieveStudentsData, saveClasses, selectedPage, pageId)
+        addListeners(
+            storedClasses,
+            storedStudents,
+            storedTeachers,
+            saveClasses,
+            saveStudents,
+            saveTeachers,
+            retrieveClassesData,
+            retrieveStudentsData,
+            retrieveTeachersData,
+            selectedPage,
+            pageId)
     }
 };
 export { handleNavbarClick }
 
 
-function addListeners(storedClasses, retrieveStudentsData, saveClasses, selectedPage, pageId) {
+function addListeners(
+    storedClasses,
+    storedStudents,
+    storedTeachers,
+    saveClasses,
+    saveStudents,
+    saveTeachers,
+    retrieveClassesData,
+    retrieveStudentsData,
+    retrieveTeachersData,
+    selectedPage,
+    pageId
+) {
     if (pageId !== "nav-home") {
         const submitBtn = document.getElementById('submit');
         const modal = new bootstrap.Modal(document.getElementById('add-btn'));
         if (submitBtn) {
-            submitBtn.addEventListener('click', handleSaveChanges(storedClasses, retrieveStudentsData, saveClasses, modal));
+            submitBtn.addEventListener('click', function () {
+                handleSaveChanges(storedClasses, retrieveStudentsData, saveClasses, modal);
+            });
         } else {
             console.log(`Page type not valid ${selectedPage ? selectedPage.pageName : 'unknown'}`);
         }
-        handleDeleteButtonClick()
+        switch (pageId) {
+            case 'nav-classes':
+                setupRemoveButtons(retrieveClassesData, 'classesData')
+                break;
+            case 'nav-students':
+                setupRemoveButtons(retrieveStudentsData, 'studentsData')
+                break;
+            case 'nav-teachers':
+                setupRemoveButtons(retrieveTeachersData, 'teachersData')
+                break;
+            default:
+                break;
+        }
     }
 }
-
-
-

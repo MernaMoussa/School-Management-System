@@ -3,7 +3,7 @@ function renderAdjustmentButtons(data) {
     return `
         <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-primary m-1 edit" id="edit-${data.id}"><i class="bi bi-pencil"></i></button>
-            <button type="button" class="btn btn-danger m-1 remove"><i class="bi bi-dash-circle"></i></button>
+            <i class="bi bi-dash-circle btn btn-danger m-1 remove" id="remove-${data.id}"></i>
         </div>
     `
 }

@@ -1,18 +1,14 @@
-import classesData from '../school-data/classes-data.js';
-import studentsData from '../school-data/students-data.js';
-import teachersData from '../school-data/teachers-data.js';
 import { saveDataToLocalStorage, getDataFromLocalStorage } from './local-storage-handler.js';
-
-function saveClassesToLocalStorage() {
-    saveDataToLocalStorage('classesData', classesData);
+function saveClassesToLocalStorage(key, classesData) {
+    saveDataToLocalStorage(key, classesData);
 }
 
-function saveStudentsToLocalStorage() {
-    saveDataToLocalStorage('studentsData', studentsData);
+function saveStudentsToLocalStorage(key, studentsData) {
+    saveDataToLocalStorage(key, studentsData);
 }
 
-function saveTeachersToLocalStorage() {
-    saveDataToLocalStorage('teachersData', teachersData);
+function saveTeachersToLocalStorage(key, teachersData) {
+    saveDataToLocalStorage(key, teachersData);
 }
 
 function getClassesFromLocalStorage() {
@@ -26,6 +22,7 @@ function getStudentsFromLocalStorage() {
 function getTeachersFromLocalStorage() {
     return getDataFromLocalStorage('teachersData');
 }
+
 export {
     saveClassesToLocalStorage,
     getClassesFromLocalStorage,

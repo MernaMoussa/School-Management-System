@@ -1,6 +1,6 @@
 import { generateNavItems } from "./navigation-bar/navbar.module.js"
 function headerTemplate(pages) {
-    return `
+  return `
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
           <div class="container">
                 <a class="navbar-brand" href="#">LMS</a>
@@ -24,4 +24,4 @@ function headerTemplate(pages) {
         </nav>
       `;
 }
-export default headerTemplate
+export { headerTemplate }

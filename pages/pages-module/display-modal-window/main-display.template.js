@@ -1,6 +1,6 @@
-function displayDetailedTemplate(template) {
+export function displayDetailedTemplate(template) {
     return `   
-    <div class="modal fade" id="add-btn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="avg-grades" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -12,6 +12,6 @@ function displayDetailedTemplate(template) {
                 </div>
             </div>
         </div>
-    </div>
-    `
+    </div>`
+
 }

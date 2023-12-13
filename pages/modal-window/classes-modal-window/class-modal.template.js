@@ -10,19 +10,12 @@ export function renderClassModalWindow(storedClasses) {
                     ${generateClassesIdOptions(storedClasses)}
                 </select>
           </div>
-
-          <div class="mb-3">
-                <label for="teacher-name">Teacher Name:</label>
-                <input type="text" class="form-control" id="teacher-name" name="teacher-name" required>
-          </div>
-
           <div class="mb-3">
                 <label for="teacher-id">Teacher ID:</label>
                 <input type="number" class="form-control" id="teacher-id" name="teacher-id" required>
           </div>
-
           <div class="mb-3">
-                <label for="department">Department:</label>
+                <label for="department">Class Name:</label>
                 <select class="form-control" id="department-options" name="department" required>
                   <option value="" disabled selected hidden>Select Department</option>
                   ${generateDepartmentOptions(storedClasses)}

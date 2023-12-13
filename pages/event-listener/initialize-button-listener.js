@@ -1,6 +1,7 @@
 import { handleSaveChanges } from '../modal-window/student-modal-window/student-handler.module.js'
 import { setupRemoveButtons } from '../control-changes.js/remove-item.module.js';
 import { setupAvgButtons } from '../pages-module/studentes-page/avg-grade-listener.js';
+import { displayDetailedTemplate } from '../pages-module/display-modal-window/main-display.template.js';
 export function initializeButtonHandlers(
     storedClasses,
     storedStudents,
@@ -29,7 +30,11 @@ export function initializeButtonHandlers(
             break;
         case 'nav-students':
             setupRemoveButtons(retrieveStudentsData, 'studentsData')
-            setupAvgButtons()
+            let avgButtons = document.querySelectorAll('.avg-grade');
+            avgButtons.forEach(function (avgButton) {
+                avgButton.addEventListener('click',
+                    function (e) { displayDetailedTemplate(storedStudents) });
+            })
             break;
         case 'nav-teachers':
             setupRemoveButtons(retrieveTeachersData, 'teachersData')

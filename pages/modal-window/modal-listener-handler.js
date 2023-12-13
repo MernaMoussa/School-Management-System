@@ -1,4 +1,4 @@
-import { updateSubjects } from "./student-modal.module.js";
+import { updateSubjects } from "./student-modal-window/student-modal.module.js";
 
 export function setupSubjectUpdateListener(storedClasses) {
     const departmentSelect = document.getElementById('department-options');

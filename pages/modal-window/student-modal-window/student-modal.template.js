@@ -1,7 +1,7 @@
 import { generateClassesIdOptions, generateDepartmentOptions } from "./student-modal.module.js"
 
-export function studentModalWindowTemplate(storedClasses, storedStudents, storedTeachers) {
-  return `
+export function renderStudentModalWindow(storedClasses, storedStudents, storedTeachers) {
+    return `
       <form id="studentForm">
           <div class="mb-3">
               <label for="classId">Class ID:</label>

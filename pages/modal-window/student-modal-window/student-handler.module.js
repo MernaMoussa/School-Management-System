@@ -1,7 +1,7 @@
 // student-handler.js
 import { saveDataToLocalStorage } from "../../../local-storage/local-storage-handler.js";
-import { validateForm } from "./form-validation.js";
-import { clearErrorMessage, displayErrorMessage } from "./error-handler.js";
+import { validateForm } from "../form-validation.js";
+import { clearErrorMessage, displayErrorMessage } from "../error-handler.js";
 
 function addStudent(existingStudents, newStudent) {
     existingStudents.push(newStudent);

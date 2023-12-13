@@ -1,6 +1,6 @@
 import { initializeContent } from "../../content/content.module.js";
 import { setupSubjectUpdateListener } from "../../../pages/modal-window/modal-listener-handler.js";
-import { handleSaveChanges } from "../../../pages/modal-window/student-handler.module.js";
+import { handleSaveChanges } from "../../../pages/modal-window/student-modal-window/student-handler.module.js";
 
 function findSelectedPage(pages, pageId) {
     return pages.find(page => `nav-${page.pageName.toLowerCase()}` === pageId);

@@ -1,6 +1,6 @@
 import { initializeContent } from "../../content/content.module.js";
 import { setupSubjectUpdateListener } from "../../../pages/modal-window/modal-listener-handler.js";
-import { addListeners } from "../../../pages/event-listener/initialize-button-listener.js";
+import { initializeButtonHandlers } from "../../../pages/event-listener/initialize-button-listener.js";
 function findSelectedPage(pages, pageId) {
     return pages.find(page => `nav-${page.pageName.toLowerCase()}` === pageId);
 }
@@ -37,7 +37,7 @@ function handleNavbarClick(
         );
         setupSubjectUpdateListener(storedClasses);
         if (pageId !== "nav-home") {
-            addListeners(
+            initializeButtonHandlers(
                 storedClasses,
                 storedStudents,
                 storedTeachers,

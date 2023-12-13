@@ -1,6 +1,7 @@
 import { handleSaveChanges } from '../modal-window/student-modal-window/student-handler.module.js'
 import { setupRemoveButtons } from '../control-changes.js/remove-item.module.js';
-export function addListeners(
+import { setupAvgButtons } from '../pages-module/studentes-page/avg-grade-listener.js';
+export function initializeButtonHandlers(
     storedClasses,
     storedStudents,
     storedTeachers,
@@ -28,6 +29,7 @@ export function addListeners(
             break;
         case 'nav-students':
             setupRemoveButtons(retrieveStudentsData, 'studentsData')
+            setupAvgButtons()
             break;
         case 'nav-teachers':
             setupRemoveButtons(retrieveTeachersData, 'teachersData')
